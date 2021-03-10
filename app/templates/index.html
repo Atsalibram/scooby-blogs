@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{%block content %}
+<div class="container" style="text-align: center;">
+  {{macro.display_blogs(blogs)}}
+  <div class="card-body">{{macro.display_comments(comments)}}</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">{{quote.quote}}</p>
+      <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+    </blockquote>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+{% endblock %}
