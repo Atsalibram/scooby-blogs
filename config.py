@@ -4,7 +4,7 @@ import os
 class Config:
     """Main configurations class"""
 
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringaaccess:scooby@localhost/mboga'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringaaccess:scooby@localhost/blogs'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.environ.get("SECRET_KEY")
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
@@ -26,13 +26,13 @@ class ProdConfig(Config):
 
 
 class DevConfig(Config):
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:scooby@localhost/mboga'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:scooby@localhost/blogs'
     DEBUG = True
 
 
 class TestConfig(Config):
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:scooby123@localhost/mboga_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:scooby123@localhost/blogs'
 
 
 config_options = {
