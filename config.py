@@ -15,6 +15,9 @@ class Config:
     MAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
     SUBJECT_PREFIX = 'BLOG'
     SENDER_EMAIL = 'atsalibaram@gmail.com'
+    BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json' 
+
+
 
  # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
